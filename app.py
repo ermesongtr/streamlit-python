@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-from dados import df, faturamento
+from dados import df, faturamento, topBuyers
 from personal_functions import format_number as fn
 
 st.set_page_config(layout='wide')
@@ -15,3 +15,6 @@ with st.container(border=True):
 
 st.header('Faturamento por mês', divider='rainbow')
 st.line_chart(faturamento)
+
+st.header('Compras por cliente', divider='rainbow')
+st.bar_chart(topBuyers, x='EmpresaID', y='Data')
