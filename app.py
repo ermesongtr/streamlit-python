@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd 
-from plotly import express as px
 from dados import df, faturamento
 from personal_functions import format_number as fn
 
